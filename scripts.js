@@ -1,4 +1,4 @@
-**
+/*
  * JavaScript: Blog Exercise.
  * @author  TECHCareers by Manpower
  * @date    2020.03.31
@@ -21,14 +21,13 @@ class Article {
     this.title = title;
     this.content = content;
   }
-  output ()
-  {
-    // TODO: Prepare output to the browser...
-    // TODO: Use template literals.
+  
+output () {
+    return Text(this.title + this.content);
   }
-}
+let element = document.querySelector("article");
 
-const blogArticles = [
+var blogArticles = [
   new Article(
     'First Day of Class (C#)',
     'Oh! C# is a programming language, often used for Windows programs... this could be really useful! It has variables, loops, and even methods; a lot to learn, but it really opens up doors!'
@@ -55,7 +54,8 @@ const blogArticles = [
   )
 ];
 
-// TODO: Add a new article to the array (add "SASS" inbetween the "CSS" and "JS" articles.)
+blogArticles.splice( 2, 0, "SASS");
+
 
 for ( let article of blogArticles )
 {
